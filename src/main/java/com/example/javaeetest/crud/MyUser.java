@@ -1,12 +1,22 @@
 package com.example.javaeetest.crud;
 
 public class MyUser {
+    private int id;
     private String name;
     private int age;
 
-    public MyUser(String name, int age) {
+    public MyUser(int id, String name, int age) {
+        this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

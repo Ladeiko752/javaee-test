@@ -21,13 +21,24 @@
             <b>Age: ${user.age}</b>
         </p>
     </var>
+
+    <form method="post" action="/delete">
+        <input type="number" hidden name="id" value="${user.id}">
+        <input type="submit" name="delete" value="Delete">
+    </form>
+
+    <form method="get" action="/update">
+        <input type="number" hidden name="id" value="${user.id}">
+        <input type="submit" name="update" value="Update">
+    </form>
+
+    <hr style="width: 350px">
 </c:forEach>
 
-<hr style="width: 550px">
 
 <h1>Add new user</h1>
 
-<form method="post" action="/users" style="text-align: center">
+<form method="post" action="/add_user" style="text-align: center">
 
     <label><input type="text" name="name" placeholder="Name"></label><br><br>
 
